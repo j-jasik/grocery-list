@@ -1,3 +1,5 @@
+import Table from 'react-bootstrap/Table';
+
 import { groceries } from "../groceries";
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";
@@ -27,7 +29,7 @@ export default function ProductTable({filterText, inStockOnly}){
   })
 
   return (
-    <table>
+    <Table striped bordered hover>
       <thead>
         <tr>
           <th>Name</th>
@@ -35,6 +37,6 @@ export default function ProductTable({filterText, inStockOnly}){
         </tr>
       </thead>
       <tbody>{rows}</tbody>
-    </table>
+    </Table>
   )
 }
